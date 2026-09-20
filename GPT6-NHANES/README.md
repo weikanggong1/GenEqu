@@ -18,7 +18,6 @@ Add `--diseases CODE1 CODE2` to select endpoints from the table below. Omit it t
 - `allowed_schema.csv`: ordered 52-measurement interface, units, category codes, and range or missingness constraints. Empty CSV cells represent missing measurements.
 - `disease_identities.csv`: endpoint identifiers and definitions.
 - `generate_nhanes14.py`: frozen sampling engine; inspect this file for equations and random sampling rules.
-- `schema_provenance.json`: schema origin and release hash metadata.
 - `generate.py`: convenience entry point resolving bundled metadata relative to the script, so generation does not depend on the current working directory.
 
 Each disease directory contains `synthetic_<CODE>_<N>.csv` with 52 predictors followed by the binary outcome named `<CODE>`. Codes in the first column of the table below are also the values accepted by `--diseases`. Output audits are supplementary metadata; use the CSV to train a classifier.

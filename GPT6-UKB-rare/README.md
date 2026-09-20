@@ -31,12 +31,11 @@ The Python function is predict_risk(X, feature_names, disease) in [core/predict.
 
 ## Model files
 
-- [allowed_schema.csv](allowed_schema.csv): the ordered 201-field measurement dictionary.
-- [disease_identities.csv](disease_identities.csv): the 15 endpoint identities and coding patterns.
+- [core/measurement_dictionary.csv](core/measurement_dictionary.csv): the ordered 201-field measurement dictionary.
+- [core/disease_identities.csv](core/disease_identities.csv): the 15 endpoint identities and coding patterns.
 - [core/model.py](core/model.py), [core/generate.py](core/generate.py) and [core/predict.py](core/predict.py): fixed scientific runtime equations.
 - [core/MODEL_SPEC.md](core/MODEL_SPEC.md): population assumptions, observation transforms and event equations.
 - [core/feature_disease_rules.csv](core/feature_disease_rules.csv): all 3,015 measurement–endpoint pairs, their shared-factor paths and conditioning-set membership.
-- [schema_provenance.json](schema_provenance.json): dictionary and runtime hashes.
 
 The thin public entry points resolve bundled files independently of the working directory. Runtime hashes are recorded in the repository source-verification report. Endpoint names describe model targets; registry-specific control exclusions and actual disease-free cohort eligibility are not reconstructed.
 
