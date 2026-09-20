@@ -1,0 +1,7 @@
+{
+  "permitted_input_files": {
+    "disease_identities.csv": "1b5e2e128ac5a1504f3a92ecd5dc1a3a955f934453f45143cca32bff0dd73960",
+    "measurement_dictionary.csv": "a9b18cf55c3464b49aee5abe7f9fd84b7430e04ae7c7ca534af3a07c40f2effd"
+  },
+  "boundary": "Disease identities and measurement dictionary only. Ranges and codes are interface constraints. No marginal quantiles, central tendencies, missing rates, cohort counts, participant records, observed disease frequencies, empirical disease effects or performance are supplied."
+}

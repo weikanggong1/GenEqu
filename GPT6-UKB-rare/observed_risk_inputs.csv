@@ -1,0 +1,39 @@
+Field_ID,Description,Unit,model_lower_bound,model_upper_bound,conditioning_rule
+21022,Age at recruitment,years,39,70,Inclusive bounds; endpoint ages use finite limiting CDF values; other values are marginalized.
+31,Gender,binary code,0,1,Codes 0=female and 1=male; missing or invalid values are integrated over the model sex mixture.
+845,Age completed full time education,years,5,35,Strictly interior finite values are conditioned on; other values are marginalized.
+21001,Body mass index (BMI),kg/m^2,14.8744,58.5937,Strictly interior finite values are conditioned on; other values are marginalized.
+4080,"Systolic blood pressure, automated reading",mmHg,80,225.5,Strictly interior finite values are conditioned on; other values are marginalized.
+102,"Pulse rate, automated reading",bpm,35,128.5,Strictly interior finite values are conditioned on; other values are marginalized.
+20258,FEV1/ FVC ratio Z-score,z-score,-3.687,4.931,Strictly interior finite values are conditioned on; other values are marginalized.
+30010,Red blood cell (erythrocyte) count,10^12 cells/L,2.5,5.4,Strictly interior finite values are conditioned on; other values are marginalized.
+30040,Mean corpuscular volume,fL,68,103,Strictly interior finite values are conditioned on; other values are marginalized.
+30060,Mean corpuscular haemoglobin concentration,g/dL,30,34,Strictly interior finite values are conditioned on; other values are marginalized.
+30000,White blood cell (leukocyte) count,10^9 cells/L,1.2,23.15,Strictly interior finite values are conditioned on; other values are marginalized.
+30620,Alanine aminotransferase,U/L,3.77,384.73,Strictly interior finite values are conditioned on; other values are marginalized.
+30600,Albumin,g/L,25.83,57.75,Strictly interior finite values are conditioned on; other values are marginalized.
+30610,Alkaline phosphatase,U/L,19.3,384.3,Strictly interior finite values are conditioned on; other values are marginalized.
+30630,Apolipoprotein A,g/L,0.771,2.498,Strictly interior finite values are conditioned on; other values are marginalized.
+30640,Apolipoprotein B,g/L,0.412,1.966,Strictly interior finite values are conditioned on; other values are marginalized.
+30650,Aspartate aminotransferase,U/L,8.2,459.9,Strictly interior finite values are conditioned on; other values are marginalized.
+30710,C-reactive protein,mg/L,0.08,71.1,Strictly interior finite values are conditioned on; other values are marginalized.
+30680,Calcium,mmol/L,1.87,3.452,Strictly interior finite values are conditioned on; other values are marginalized.
+30700,Creatinine,umol/L,10.8,819,Strictly interior finite values are conditioned on; other values are marginalized.
+30720,Cystatin C,mg/L,0.295,5.581,Strictly interior finite values are conditioned on; other values are marginalized.
+30730,Gamma glutamyltransferase,U/L,5.8,1092.9,Strictly interior finite values are conditioned on; other values are marginalized.
+30740,Glucose,mmol/L,1.585,32.746,Strictly interior finite values are conditioned on; other values are marginalized.
+30750,Glycated haemoglobin (HbA1c),mmol/mol,15.6,126.6,Strictly interior finite values are conditioned on; other values are marginalized.
+30760,HDL cholesterol,mmol/L,0.569,4.107,Strictly interior finite values are conditioned on; other values are marginalized.
+30770,IGF-1,nmol/L,3.559,68.832,Strictly interior finite values are conditioned on; other values are marginalized.
+30780,LDL direct,mmol/L,1.128,7.418,Strictly interior finite values are conditioned on; other values are marginalized.
+30790,Lipoprotein A,nmol/L,3.8,189,Strictly interior finite values are conditioned on; other values are marginalized.
+30800,Oestradiol,pmol/L,175,12647.8,Strictly interior finite values are conditioned on; other values are marginalized.
+30810,Phosphate,mmol/L,0.425,1.844,Strictly interior finite values are conditioned on; other values are marginalized.
+30820,Rheumatoid factor,IU/mL,10,118.6,Strictly interior finite values are conditioned on; other values are marginalized.
+30830,SHBG,nmol/L,0.47,236.68,Strictly interior finite values are conditioned on; other values are marginalized.
+30850,Testosterone,nmol/L,0.35,45.795,Strictly interior finite values are conditioned on; other values are marginalized.
+30870,Triglycerides,mmol/L,0.356,10.969,Strictly interior finite values are conditioned on; other values are marginalized.
+30880,Urate,umol/L,101.3,765.5,Strictly interior finite values are conditioned on; other values are marginalized.
+30670,Urea,mmol/L,1.48,26.19,Strictly interior finite values are conditioned on; other values are marginalized.
+30890,Vitamin D,nmol/L,10,169,Strictly interior finite values are conditioned on; other values are marginalized.
+20161,Pack years of smoking,pack-years,0,222,Interior values are transformed; 0 and 222 are censored observations; other values are marginalized.

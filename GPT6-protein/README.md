@@ -8,7 +8,7 @@ This generator samples 648 protein measurements and six binary labels: cognitive
 python GPT6-protein/generate.py --n 6000 --seed 20260908 --output generated/protein.npz
 ```
 
-`--n` must be a multiple of six and at least 12. The default is 60,000. Primary labels are balanced across the six groups. Some participants with a disease receive a second disease label, so positive counts in the six binary tasks need not be equal. CU does not co-occur with a disease. The frozen multilabel random stream uses the supplied seed plus 1,000 internally, matching the original research engine.
+`--n` must be a multiple of six and at least 12. The default is 60,000. Primary labels are balanced across the six groups. Some participants with a disease receive a second disease label, so positive counts in the six binary tasks need not be equal. CU does not co-occur with a disease. The multilabel random stream uses the supplied seed plus 1,000 internally.
 
 ## Output
 
@@ -30,4 +30,4 @@ Train each binary task using the corresponding `Y` column. `primary_label` is **
 
 The model adds global and protein-family variation to protein-specific background abundance, then adds disease-specific shifts weighted by participant severity. Inspect `feature_effects.csv` for all 648 × 6 effects, including zero effects. `identity_only.csv` provides protein identities. All values are synthetic; no participant abundance table is packaged.
 
-`GENERATOR_SPEC.md` and `EVIDENCE_FREEZE.json` preserve the historical design and its runtime integrity checks. Their archived multiclass/control instructions are not the supported release workflow; use `generate.py` for the six binary tasks. Historical freeze status is distinct from the current release validation report.
+[GENERATOR_SPEC.md](GENERATOR_SPEC.md) documents the supported six-binary interface, the shipped identity and effect tables, and the measurement equations. EVIDENCE_FREEZE.json records design provenance and verifies runtime integrity; validation_report.json at the repository root records the public software checks.

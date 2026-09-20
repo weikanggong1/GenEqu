@@ -47,7 +47,16 @@
   },
   "label_free": {
     "rows": 256,
-    "measurements": 201
+    "measurements": 201,
+    "prefix_rows_checked": 113,
+    "dtype": "float32",
+    "body_mass_identity": true
+  },
+  "rare_risk": {
+    "correctness_tests": 9,
+    "conditioning_fields": 38,
+    "cli_rows": 1000,
+    "full_and_selected_input_agree": true
   },
   "status": "passed"
 }

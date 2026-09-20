@@ -1,6 +1,6 @@
 # GPT6-UKB
 
-Shared physiological factors generate the measurement panel and enter endpoint-specific logistic risk equations. Numeric measurement equations, category probabilities, missingness, rounding, and range constraints are explicit in the engine and `rulebook.py`. Each endpoint represents a separately generated population; it is not a joint 30-label dataset.
+Shared physiological factors generate the measurement panel and enter endpoint-specific 15-year event equations. The event probability is 1 − exp[−0.004 × 15 × exp(clip(η,−12,12))], where η combines the endpoint's factor weights, applicable subtype effects and independently sampled susceptibility/progression terms. The annual hazard prior of 0.004 is an authored modeling assumption. Numeric measurement equations, category probabilities, missingness, rounding, and range constraints are explicit in the engine and `rulebook.py`. Each endpoint represents a separately generated population; it is not a joint 30-label dataset.
 
 ## Run
 
@@ -60,10 +60,8 @@ Each disease directory contains `synthetic_<CODE>_<N>.csv` with 201 predictors f
 
 ## Optional label-free population
 
-The `label_free` directory supplies the frozen 201-variable background population generator used for representation-learning inputs. It returns measurements without disease targets. Its background engine is invoked in an inert, zero-disease mode; the legacy disease-specific interfaces in that dependency are not used here.
+The [label-free generator](label_free/README.md) constructs 201 baseline measurements for representation learning. Its dictionary, shared physiological factors, algebraic identities, categorical rules and missingness assumptions are explicit; it generates no disease or prediction targets.
 
-```bash
-python GPT6-UKB/label_free/generate_label_free_population_v4.py --n 1000 --audit-rows 500 --seed 20260831 --output-dir generated/label_free
-```
+    python GPT6-UKB/label_free/generate.py --n 1000 --seed 20260831 --output-dir generated/label_free
 
-Use `--write-csv` to additionally write CSV output. This mode uses the aggregate marginal constraints in its bundled schema. Its English translation preserves the original category-selection rule and numerical values.
+The output contains synthetic_features_float32.npy, feature_columns.json and generation_parameters.json. Rows follow the dictionary's exact Field-ID order. All numeric priors and dependence mechanisms are authored assumptions. See [label_free/core/MODEL_SPEC.md](label_free/core/MODEL_SPEC.md) and the 201-row [measurement rule table](label_free/core/measurement_rules.csv).

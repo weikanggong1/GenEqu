@@ -1,38 +1,13 @@
 {
-  "source": "Frozen generator schema supplied with this release",
-  "source_sha256": "ba878a0aa56f2b02c3f8f978e7192f8c37d8dbb2047d2a0c4236e874a2703014",
-  "allowed_schema_sha256": "b5dc34ebb53110c7031cae0cbabf5a6f4ce74fae896232e25b18cbb17c4b3ad5",
+  "measurement_dictionary_sha256": "a9b18cf55c3464b49aee5abe7f9fd84b7430e04ae7c7ca534af3a07c40f2effd",
+  "disease_identities_sha256": "1b5e2e128ac5a1504f3a92ecd5dc1a3a955f934453f45143cca32bff0dd73960",
   "n_features": 201,
-  "columns_allowed": [
-    "Field_ID",
-    "Category",
-    "Detail_Category",
-    "Description",
-    "Variable_Type",
-    "Observed_Min",
-    "Observed_P01",
-    "Observed_Median",
-    "Observed_P99",
-    "Observed_Max",
-    "Observed_Integer_Only",
-    "Observed_Allowed_Values",
-    "Unit",
-    "Unit_Source",
-    "Recommended_Data_Type",
-    "Recommended_Hard_Min",
-    "Recommended_Hard_Max",
-    "Recommended_Allowed_Values",
-    "Recommended_Missing_Rate",
-    "Observed_Decimal_Places_P95",
-    "Recommended_Decimal_Places"
-  ],
-  "columns_excluded": [
-    "Participants_N",
-    "Notes",
-    "Suggested_Marginal_Distribution",
-    "Generation_Constraint"
-  ],
-  "boundary": "Pre-existing G0 input schema only. No generator code, disease-effect rules, participant-level records, correlations or evaluation results read by this extraction.",
-  "original_allowed_schema_sha256": "bacab2797109706fc4802360d2cdf19d3c08837b7c2d7503de41b8759d86235b",
-  "release_note": "English metadata normalization only; numeric constraints and model parameters are unchanged."
+  "model_version": "dictionary_probit_15y_1",
+  "construction_inputs": "Measurement names, units, permissible ranges and codes, plus endpoint identities.",
+  "model_parameters": "Explicit authored distribution, loading, event-equation and missingness assumptions.",
+  "runtime_source_hashes": {
+    "model.py": "9a6a860c4fecf3386b94e432fcaca115ec91ecdb21441f95f6c72a2a7cb3c0a9",
+    "generate.py": "ac340ae0fc153091db39c9e253194425bbf52a8c9df3180b73721426f42d4468",
+    "predict.py": "ee1c8094a182be043864860b31dbd5b21ab0b66235c859e00555ad2963bb85f2"
+  }
 }

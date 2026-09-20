@@ -1,27 +1,44 @@
 # GPT6-UKB-rare
 
-Endpoint-specific risk weights couple Gaussian factors to case status. Frozen marginal quantiles and categorical rules map factors to measurements. Case proportions are prescribed by the rules. Aggregate schema summaries are part of this generator; they are not participant records.
+Seventeen shared baseline factors generate a 201-measurement population. Endpoint-specific probit equations then sample binary events over an assumed 15-year horizon. The measurement dictionary supplies names, units, bounds and category codes; all population distributions, factor loadings, event coefficients and missingness mechanisms are explicit modeling assumptions. Disease labels do not enter measurement generation.
 
-## Run
+## Generate populations
 
 From the repository root:
 
-```bash
-python GPT6-UKB-rare/generate.py --n 1000 --seed 20260831 --output-dir generated/GPT6-UKB-rare
-python GPT6-UKB-rare/generate.py --help
-```
+    python GPT6-UKB-rare/generate.py --n 1000 --seed 20260831 --output-dir generated/rare
+    python GPT6-UKB-rare/generate.py --diseases E4_HYPERPARA K11_COELIAC --n 1000 --seed 42 --output-dir generated/rare_selected
 
-Add `--diseases CODE1 CODE2` to select endpoints from the table below. Omit it to generate all 15. `--n` specifies rows **per endpoint**. Repeating the command with the same inputs, seed, and dependency versions reproduces the measurements and labels; runtime timestamps in audit files can differ. Output paths must be new.
+Omitting --diseases generates all 15 endpoints. --n is the number of rows per endpoint, with a default of 360,000. Each endpoint receives an independent population and stochastic event labels; case counts are not fixed. Small samples may contain no positive cases. The output directory must not exist.
 
-## Files and interpretation
+Each synthetic_CODE_N.csv contains 201 ordered Field-ID predictors followed by a binary outcome named CODE. The audit.json file records seeds, source/input hashes, row counts, missingness and output hashes; its status becomes complete after every requested file is written. Identical inputs, seed, row count and dependency versions reproduce the generated values. Row prefixes across different requested sample sizes are not guaranteed.
 
-- `allowed_schema.csv`: ordered 201-measurement interface, units, category codes, and range or missingness constraints. Empty CSV cells represent missing measurements.
-- `disease_identities.csv`: endpoint identifiers and definitions.
-- `generate_gpt6_rare_v1.py`: frozen sampling engine; inspect this file for equations and random sampling rules.
-- `schema_provenance.json`: schema origin and release hash metadata.
-- `generate.py`: convenience entry point resolving bundled metadata relative to the script, so generation does not depend on the current working directory.
+## Observed-measurement risk
 
-Each disease directory contains `synthetic_<CODE>_<N>.csv` with 201 predictors followed by the binary outcome named `<CODE>`. Codes in the first column of the table below are also the values accepted by `--diseases`. Output audits are supplementary metadata; use the CSV to train a classifier.
+    python GPT6-UKB-rare/predict.py --input predictors.csv --disease E4_HYPERPARA --output generated/rare_risk.csv
+
+The input is a numeric CSV with unique Field-ID column names and no outcome column. The output is one continuous probability per row. NaN and blank cells are accepted. Remove the synthetic target before supplying generated data:
+
+    import pandas as pd
+    frame = pd.read_csv("generated/rare/synthetic_E4_HYPERPARA_1000.csv")
+    frame.iloc[:, :201].to_csv("predictors.csv", index=False)
+
+The interface accepts any named subset of the 201 dictionary fields. Its conditioning set consists of exactly **38 measurements**: age, sex, pack-years and 35 continuous observation equations. [observed_risk_inputs.csv](observed_risk_inputs.csv) lists every input, description, unit, model support and missing-value rule. Other dictionary fields are accepted but do not enter the risk calculation. Unknown columns, including outcomes, are rejected.
+
+Available observations update the shared-factor distribution using fixed Gaussian conditioning. The event equation integrates the remaining uncertainty; missing sex is integrated over its two model components. Pack-years at zero or its upper bound use censored-observation integration with a fixed 48-node rule. Missing or out-of-support values contribute no observation likelihood, except for the explicitly handled age boundaries and smoking censoring. No fitting, batch statistics or outcome calibration occurs. The result is P(15-year event | the available declared measurement subset), an assumed-model probability rather than a clinically calibrated risk estimate.
+
+The Python function is predict_risk(X, feature_names, disease) in [core/predict.py](core/predict.py). [core/MODEL_SPEC.md](core/MODEL_SPEC.md) provides its equations and an executable import example. [core/test_model.py](core/test_model.py) verifies prior integration, censoring quadrature, missingness, sex gating, row/batch invariance and rejection of outcome columns.
+
+## Model files
+
+- [allowed_schema.csv](allowed_schema.csv): the ordered 201-field measurement dictionary.
+- [disease_identities.csv](disease_identities.csv): the 15 endpoint identities and coding patterns.
+- [core/model.py](core/model.py), [core/generate.py](core/generate.py) and [core/predict.py](core/predict.py): fixed scientific runtime equations.
+- [core/MODEL_SPEC.md](core/MODEL_SPEC.md): population assumptions, observation transforms and event equations.
+- [core/feature_disease_rules.csv](core/feature_disease_rules.csv): all 3,015 measurement–endpoint pairs, their shared-factor paths and conditioning-set membership.
+- [schema_provenance.json](schema_provenance.json): dictionary and runtime hashes.
+
+The thin public entry points resolve bundled files independently of the working directory. Runtime hashes are recorded in the repository source-verification report. Endpoint names describe model targets; registry-specific control exclusions and actual disease-free cohort eligibility are not reconstructed.
 
 ## Endpoints
 

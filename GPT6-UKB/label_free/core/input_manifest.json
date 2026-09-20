@@ -1,0 +1,17 @@
+{
+  "model_requested": "gpt-6-astra",
+  "reasoning_effort_requested": "ultra",
+  "permitted_input_files": {
+    "measurement_dictionary.csv": "a9b18cf55c3464b49aee5abe7f9fd84b7430e04ae7c7ca534af3a07c40f2effd"
+  },
+  "prohibited_inputs": [
+    "disease identities or target diagnoses",
+    "participant records",
+    "empirical univariate summaries including quantiles",
+    "empirical disease frequencies",
+    "empirical disease effects",
+    "prediction results",
+    "existing generator source code"
+  ],
+  "internet_or_literature_retrieval": false
+}

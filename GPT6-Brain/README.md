@@ -29,4 +29,4 @@ The AD model adds disease-specific shifts on the log-volume scale with individua
 
 ## Provenance
 
-`ad` and `scz` retain the frozen research engines and evidence tables. Historical AAL3 and control branches remain internally for source preservation; `generate.py` exposes only the FIRST knowledge-based cohorts used by this release. The wrapper does not change the equations or the default random streams of these cohorts. Historical manifests describe the original research freeze and can list ancillary files that are not required for this interface.
+The ad and scz directories contain the fixed sampling engines, FIRST effect tables, reference records and feature-coverage tables. The public generate.py interface exposes the FIRST knowledge-based populations described above. Evidence-derived effect values and their modeling conversions are documented in the packaged effect tables; source hashes record the scientific inputs.

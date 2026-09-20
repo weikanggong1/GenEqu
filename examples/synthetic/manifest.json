@@ -5,7 +5,8 @@
     "endpoint": "E4_DM2",
     "rows": 1000,
     "seed": 20260831,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "b189aa69a62e4941a79f5f658cdcdff982feea7cf4ea396300ffe77f48af0503"
   },
   {
     "file": "GPT6-UKB-rare_E4_HYPERPARA.csv",
@@ -13,7 +14,8 @@
     "endpoint": "E4_HYPERPARA",
     "rows": 1000,
     "seed": 20260831,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "f18d09d769b631ecdbe170441530366380edd7718ccbc2be345ee143ce4ace08"
   },
   {
     "file": "GPT6-NHANES_E4_DM2.csv",
@@ -21,7 +23,8 @@
     "endpoint": "E4_DM2",
     "rows": 1000,
     "seed": 20260831,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "87a8e542292247c0c9dc84f67ee5ceaffc82e2cf92bafb4fdf75e138df9c739d"
   },
   {
     "file": "GPT6-KNHANES_E4_DM2.csv",
@@ -29,7 +32,8 @@
     "endpoint": "E4_DM2",
     "rows": 1000,
     "seed": 20260831,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "c7df2adceab7e0cfba2dff20ab43bd42a24cdb4b87788b9c8bcab8ecd80881f6"
   },
   {
     "file": "GPT6-Brain_ad-binary.npz",
@@ -37,7 +41,8 @@
     "task": "ad-binary",
     "n_per_class": 50,
     "seed": 20260908,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "bdebf33f8e3cfdd3c82be6ca7af7d87853d45f205518bc015e56e1198557cd7b"
   },
   {
     "file": "GPT6-Brain_ad-multiclass.npz",
@@ -45,7 +50,8 @@
     "task": "ad-multiclass",
     "n_per_class": 50,
     "seed": 20260908,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "c543463476eccabeb502ce9f8c6992ff9fc436587a0d90244bb64932a51ea9a4"
   },
   {
     "file": "GPT6-Brain_scz.npz",
@@ -53,13 +59,54 @@
     "task": "scz",
     "n_per_class": 50,
     "seed": 20260918,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "74b0765cadd177c027ab70d2ba2c3c5941c7df6487c831d3f4dd698e7d99e681"
   },
   {
     "file": "GPT6-protein.npz",
     "generator": "GPT6-protein",
     "rows": 120,
     "seed": 20260908,
-    "synthetic": true
+    "synthetic": true,
+    "sha256": "169257b1517e3b4f428c3738c457f5e5598ce40209c205023c213fe007294f03"
+  },
+  {
+    "file": "GPT6-UKB_label_free.npy",
+    "generator": "GPT6-UKB",
+    "mode": "label_free",
+    "rows": 256,
+    "measurements": 201,
+    "seed": 20260831,
+    "synthetic": true,
+    "sha256": "50886a875c8ae0d82dd6157d26b8ce6230cf68e29c399524f9b8784829606b5b"
+  },
+  {
+    "file": "GPT6-UKB_label_free_columns.json",
+    "generator": "GPT6-UKB",
+    "mode": "label_free",
+    "rows": 256,
+    "measurements": 201,
+    "seed": 20260831,
+    "synthetic": true,
+    "sha256": "2eaf02a0de47120521156a5289ebec8affb8edd03dbe414a8af3b477ec9f8035"
+  },
+  {
+    "file": "GPT6-UKB-rare_predictors.csv",
+    "generator": "GPT6-UKB-rare",
+    "mode": "observed_risk_inputs",
+    "rows": 1000,
+    "measurements": 38,
+    "seed": 20260831,
+    "synthetic": true,
+    "sha256": "e036c99b2d0fbe897703c0d0a56b82f6318ddf41b8b193f0d7e6b846f6be94fa"
+  },
+  {
+    "file": "GPT6-UKB-rare_probabilities.csv",
+    "generator": "GPT6-UKB-rare",
+    "mode": "observed_risk",
+    "endpoint": "E4_HYPERPARA",
+    "rows": 1000,
+    "synthetic": true,
+    "sha256": "93df7102ec51923a6920943dc166e6ab797cfb06c4c49d9d4b8c6dc7b2776916"
   }
 ]
