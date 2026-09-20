@@ -1,0 +1,10 @@
+{
+  "evaluation": "held-out synthetic demonstration, not real-cohort validation",
+  "training_rows": 600,
+  "validation_rows": 200,
+  "test_rows": 200,
+  "C": 0.01,
+  "threshold": 0.19,
+  "test_auc": 0.730673792708532,
+  "test_f1": 0.3448275862068966
+}

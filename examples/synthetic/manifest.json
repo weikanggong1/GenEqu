@@ -1,0 +1,65 @@
+[
+  {
+    "file": "GPT6-UKB_E4_DM2.csv",
+    "generator": "GPT6-UKB",
+    "endpoint": "E4_DM2",
+    "rows": 1000,
+    "seed": 20260831,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-UKB-rare_E4_HYPERPARA.csv",
+    "generator": "GPT6-UKB-rare",
+    "endpoint": "E4_HYPERPARA",
+    "rows": 1000,
+    "seed": 20260831,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-NHANES_E4_DM2.csv",
+    "generator": "GPT6-NHANES",
+    "endpoint": "E4_DM2",
+    "rows": 1000,
+    "seed": 20260831,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-KNHANES_E4_DM2.csv",
+    "generator": "GPT6-KNHANES",
+    "endpoint": "E4_DM2",
+    "rows": 1000,
+    "seed": 20260831,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-Brain_ad-binary.npz",
+    "generator": "GPT6-Brain",
+    "task": "ad-binary",
+    "n_per_class": 50,
+    "seed": 20260908,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-Brain_ad-multiclass.npz",
+    "generator": "GPT6-Brain",
+    "task": "ad-multiclass",
+    "n_per_class": 50,
+    "seed": 20260908,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-Brain_scz.npz",
+    "generator": "GPT6-Brain",
+    "task": "scz",
+    "n_per_class": 50,
+    "seed": 20260918,
+    "synthetic": true
+  },
+  {
+    "file": "GPT6-protein.npz",
+    "generator": "GPT6-protein",
+    "rows": 120,
+    "seed": 20260908,
+    "synthetic": true
+  }
+]

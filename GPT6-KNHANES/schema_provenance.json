@@ -1,0 +1,28 @@
+{
+  "schema": "44 predefined shared measurement identities, descriptions, units, categories, and official question/measurement semantics only",
+  "excluded_information": [
+    "participant rows",
+    "missing counts",
+    "case counts",
+    "cohort moments/quantiles",
+    "empirical hard bounds",
+    "synthetic or real effects",
+    "prior generators",
+    "evaluation results"
+  ],
+  "age_range": [
+    40,
+    70
+  ],
+  "categorical_fields": [
+    "31",
+    "20116",
+    "1239",
+    "20117"
+  ],
+  "numeric_fields": 40,
+  "hard_constraints": "Age 40-70; household size integer 1-6, with 6 meaning 6 or more; walking days integer 0-7; physiological numeric values nonnegative. Other ranges to be independently authored, not inferred from empirical data.",
+  "original_allowed_schema_sha256": "8631aac2f3f31fc0728f4a7a877f69b45e537836e5bb921da86239a14efd338f",
+  "allowed_schema_sha256": "8631aac2f3f31fc0728f4a7a877f69b45e537836e5bb921da86239a14efd338f",
+  "release_note": "English metadata normalization only; numeric constraints and model parameters are unchanged."
+}

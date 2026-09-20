@@ -1,0 +1,16 @@
+atlas,column_index,label_id,feature_name
+FIRST,0,10,L_Thalamus
+FIRST,1,49,R_Thalamus
+FIRST,2,11,L_Caudate
+FIRST,3,50,R_Caudate
+FIRST,4,12,L_Putamen
+FIRST,5,51,R_Putamen
+FIRST,6,13,L_Pallidum
+FIRST,7,52,R_Pallidum
+FIRST,8,16,BrainStem
+FIRST,9,17,L_Hippocampus
+FIRST,10,53,R_Hippocampus
+FIRST,11,18,L_Amygdala
+FIRST,12,54,R_Amygdala
+FIRST,13,26,L_Accumbens
+FIRST,14,58,R_Accumbens

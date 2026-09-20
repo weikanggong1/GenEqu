@@ -1,0 +1,38 @@
+{
+  "source": "Frozen generator schema supplied with this release",
+  "source_sha256": "ba878a0aa56f2b02c3f8f978e7192f8c37d8dbb2047d2a0c4236e874a2703014",
+  "allowed_schema_sha256": "b5dc34ebb53110c7031cae0cbabf5a6f4ce74fae896232e25b18cbb17c4b3ad5",
+  "n_features": 201,
+  "columns_allowed": [
+    "Field_ID",
+    "Category",
+    "Detail_Category",
+    "Description",
+    "Variable_Type",
+    "Observed_Min",
+    "Observed_P01",
+    "Observed_Median",
+    "Observed_P99",
+    "Observed_Max",
+    "Observed_Integer_Only",
+    "Observed_Allowed_Values",
+    "Unit",
+    "Unit_Source",
+    "Recommended_Data_Type",
+    "Recommended_Hard_Min",
+    "Recommended_Hard_Max",
+    "Recommended_Allowed_Values",
+    "Recommended_Missing_Rate",
+    "Observed_Decimal_Places_P95",
+    "Recommended_Decimal_Places"
+  ],
+  "columns_excluded": [
+    "Participants_N",
+    "Notes",
+    "Suggested_Marginal_Distribution",
+    "Generation_Constraint"
+  ],
+  "boundary": "Pre-existing G0 input schema only. No generator code, disease-effect rules, participant-level records, correlations or evaluation results read by this extraction.",
+  "original_allowed_schema_sha256": "bacab2797109706fc4802360d2cdf19d3c08837b7c2d7503de41b8759d86235b",
+  "release_note": "English metadata normalization only; numeric constraints and model parameters are unchanged."
+}

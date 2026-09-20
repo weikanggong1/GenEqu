@@ -1,0 +1,33 @@
+{
+  "source_sha256": "bacab2797109706fc4802360d2cdf19d3c08837b7c2d7503de41b8759d86235b",
+  "allowed_schema_sha256": "a9b18cf55c3464b49aee5abe7f9fd84b7430e04ae7c7ca534af3a07c40f2effd",
+  "n_features": 201,
+  "permitted_columns": [
+    "Field_ID",
+    "Category",
+    "Detail_Category",
+    "Description",
+    "Variable_Type",
+    "Unit",
+    "Recommended_Data_Type",
+    "Recommended_Hard_Min",
+    "Recommended_Hard_Max",
+    "Recommended_Allowed_Values",
+    "Recommended_Decimal_Places"
+  ],
+  "omitted_columns": [
+    "Observed_Min",
+    "Observed_P01",
+    "Observed_Median",
+    "Observed_P99",
+    "Observed_Max",
+    "Observed_Integer_Only",
+    "Observed_Allowed_Values",
+    "Unit_Source",
+    "Recommended_Missing_Rate",
+    "Observed_Decimal_Places_P95"
+  ],
+  "provenance_note": "Pre-existing measurement constraints; some hard bounds derive from the previously assembled schema. No empirical medians, quantiles, missingness rates, disease-effect estimates, disease frequencies, model outputs or previous generator rules supplied. This is input-level blinding, not a claim that no aggregate-derived bound was ever used.",
+  "original_allowed_schema_sha256": "eebfe983698d4be3f2d857453c48b0d86096071f946ffa80b26f91e4199e517c",
+  "release_note": "English metadata normalization only; numeric constraints and model parameters are unchanged."
+}

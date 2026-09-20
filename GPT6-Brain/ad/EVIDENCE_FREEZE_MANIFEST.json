@@ -1,0 +1,86 @@
+{
+  "status": "FROZEN_BEFORE_SYNTHETIC_AND_TARGET_EVALUATION_AFTER_EVIDENCE_ONLY_REVIEW",
+  "created_utc": "2026-09-08T06:26:10.204211+00:00",
+  "scope": "AD/MCI FIRST15+AAL3_166; public aggregate literature and atlas identities only",
+  "source_overlap": "ADNI cohorts overlap across papers. Source medians are a modeling heuristic, not an independent-study meta-analysis.",
+  "files": [
+    {
+      "path": "references.csv",
+      "sha256": "6fa12e756c126933b34902e3abcdf53006047c7624a97873112f322a7f0cf21d"
+    },
+    {
+      "path": "associations.csv",
+      "sha256": "5b6d22f6e1d97d7ea3d4a0b67c904559d2885415acdf3cb8a74feb5ec688d7b3"
+    },
+    {
+      "path": "feature_coverage.csv",
+      "sha256": "0ad7676bb1401fedd5666294a7bd5f542a0db2045ca3e4df51199f711c38970a"
+    },
+    {
+      "path": "feature_effects.csv",
+      "sha256": "e80e934d464239c3a80ff2eaab18c859d32afe755b84a86d20aca5ef387adba0"
+    },
+    {
+      "path": "identity/first_identity.csv",
+      "sha256": "03f0a49db743542cbe9aaf34e8c0a61d7f218ba305ac4d13a05f3855271e8e42"
+    },
+    {
+      "path": "identity/aal3_identity.csv",
+      "sha256": "768b4f59b587f12b919b5620fe726c2af2684d61389778b8bbb059d74b37a4f5"
+    },
+    {
+      "path": "curate_evidence.py",
+      "sha256": "5eb26b4cc6da2bb5e1ec6c9db73c3b956d41c07b134f438d12bc6b161e701a10"
+    },
+    {
+      "path": "supplement_curations.py",
+      "sha256": "3431a01a575bd5a29825640753898e976c337e83b4d08798c1075158d7f23d79"
+    },
+    {
+      "path": "parse_ledig_tables.py",
+      "sha256": "0e4383026f6180ea07d8c97c8cd2b18ffd85cec073418bad55350e4e8e650b2a"
+    },
+    {
+      "path": "freeze_feature_effects.py",
+      "sha256": "fe32a509262dcad86b6bdaac8659b04e68bbf90ac04dcdf1848dce7835f6f055"
+    },
+    {
+      "path": "sources/Ledig2018_parsed_aggregate.json",
+      "sha256": "90cb427671e1bb2473de242f4544da0225c594f0c2bb5e08cf7c9b98c69df872"
+    },
+    {
+      "path": "sources/Ledig2018_derived_MCI_vs_HC.csv",
+      "sha256": "40d0bc953f528022e173a5d4751691301e01eed995604a4d4fee5ee08d3f0752"
+    }
+  ],
+  "counts": {
+    "FIRST_AD": {
+      "features": 15,
+      "nonzero_model_means": 15,
+      "numeric_volume": 15,
+      "directional_assumptions": 0,
+      "unresolved_zero_center": 0
+    },
+    "FIRST_MCI": {
+      "features": 15,
+      "nonzero_model_means": 15,
+      "numeric_volume": 15,
+      "directional_assumptions": 0,
+      "unresolved_zero_center": 0
+    },
+    "AAL3_AD": {
+      "features": 166,
+      "nonzero_model_means": 137,
+      "numeric_volume": 102,
+      "directional_assumptions": 35,
+      "unresolved_zero_center": 29
+    },
+    "AAL3_MCI": {
+      "features": 166,
+      "nonzero_model_means": 134,
+      "numeric_volume": 116,
+      "directional_assumptions": 18,
+      "unresolved_zero_center": 32
+    }
+  }
+}

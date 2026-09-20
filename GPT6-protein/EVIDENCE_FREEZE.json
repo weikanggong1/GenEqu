@@ -1,0 +1,71 @@
+{
+  "design_id": "protein_evidence_expansion_v2_20260908",
+  "design_date": "2026-09-08",
+  "required_runtime_files": [
+    "generate_protein_v2.py",
+    "feature_effects.csv",
+    "identity_only.csv",
+    "GENERATOR_SPEC.md",
+    "EFFECTS_DESIGN.json"
+  ],
+  "design_sha256": {
+    "generate_protein_v2.py": "2fd86ee8790611308865a3521cd68198129482eb6a683e33bfd05ee1eaef0807",
+    "feature_effects.csv": "15a56d0a5e087617d2091294e7051e5aab054eea9eded4d1d92fdf1057a82706",
+    "identity_only.csv": "79880b262b1c7f4571512d1b2e4338701fd0212a8ff684cae0c1ec23d5bf45b3",
+    "GENERATOR_SPEC.md": "b0d8bf8019f34995b76b4700ec3206f9021d8e03cf86d1d6dfbaff1acf7fff42",
+    "EFFECTS_DESIGN.json": "acf8c7e16718ca65445a4b960cd82dc87c36f02251b2208a38cd8cd7a91affbc",
+    "build_evidence.py": "4fdefe8e1ee9e9f826e38b55e30fd0230559db53b9fbf8490aeafd6c55cd178f",
+    "build_feature_effects.py": "6545beb656d5fcd1eb65a2662f7da8e6e99fe837865cc0e211fe28142aca3e66",
+    "table_readers.py": "f1b1c642883f528131ddf87f1bdb1237f844b97b58dd22cb3d9ab238598dd344",
+    "finalize_design.py": "1d5760ac5e20765d190445fe211a413cc971c69a60ad923947562ecff20e925b",
+    "associations.csv": "d94afc01777efd9a4a0940f45879b0287c8f1fc123e6672ed1e584aebbffa142",
+    "feature_coverage.csv": "3014ca3163fb120831de45f7a5a26dbe38d372bd5cb350783e6c3e70d0bf91b9",
+    "references.csv": "f2721c0fcc54d5d118f5ee94cfac87e41cacdf41fce4e5996ce38f7b2e00bd4c",
+    "gene_search_log.csv": "89339240f18272674c894d7124c7dc4d34a152cff8acbec679ee264f53e9ae65",
+    "gene_search_plan.csv": "0cc3c7388352a0cc719a6dff69a9e27f242931093d622e43735a090908405f15",
+    "prior_exclusions.csv": "d166fe1a498243d1230c888e51d0722511ff440e1964ee1efd88678fa6805e3c",
+    "EVIDENCE_STATUS.json": "81e078fe9cdc53fbd8ee9127fc6c14101b2eab1b3a04411b17394e0c7665c240",
+    "public_source_manifest.csv": "64b7d936d4521ff190328d91552d2dc4d2974f37fefa1de2319b10e950026b76",
+    "RESEARCH_SUMMARY_ZH.md": "fcac3720aa6aee153936b0d0d57ad5af7e7de47f21a5db7ff4cb89413c6f2aff",
+    "gnpc_public_cohort_identity_only.csv": "ce0b121bbd23680c69e4d10af8a60df814d64d231669d5485e3d2d32651a9067",
+    "atlas_final_download_results.json": "112eac7ebefc10da38e84015d62c27866305b03d7e144261e1ab2982ee923c93",
+    "RESEARCH_PROTOCOL.md": "3e35084504318780e411b756a1c0fc74d18de164cfec7a0a8dfdea59624b7d1f",
+    "IDENTITY_MANIFEST.json": "8c25b584b5061c261982ae15c631db7f05729d52d37ffbc3e5d97cf62a607ff7",
+    "INDEPENDENT_REVIEW.json": "63598a067c0ec97185ab742b0dee68314060e57fc98c0418ab3b984eb90e9fff"
+  },
+  "features": 648,
+  "labels": [
+    "CU",
+    "AD",
+    "PD",
+    "FTD",
+    "ALS",
+    "StrokeTIA"
+  ],
+  "gene_queries": 630,
+  "gene_queries_truncated": 163,
+  "nonzero_assay_disease_pairs": 152,
+  "nonzero_unique_assays": 120,
+  "nonzero_by_disease": {
+    "AD": 10,
+    "PD": 24,
+    "FTD": 13,
+    "ALS": 23,
+    "StrokeTIA": 82
+  },
+  "public_source_files": 690,
+  "target_participant_values_read": false,
+  "target_effects_used": false,
+  "real_model_fitted": false,
+  "old_blocklist_or_rules_used": false,
+  "numeric_self_test": "pending_authorized_computation_server",
+  "static_validation": "PASS_identity_order_counts_provenance_exclusions_C3_fragments_CU_syntax",
+  "independent_evidence_review": "PASS_WITH_EXPLICIT_SCOPE_LIMITS",
+  "prefreeze_review_corrections": [
+    "total_C3_not_transferred_to_fragments",
+    "FAP_controls_are_cardiology_patients",
+    "IL1R2_PD_context_corrected",
+    "generic_Atlas_NPPB_epitope_transfer_excluded"
+  ],
+  "scope": "630 gene queries and listed bulk tables reviewed at stated levels; 8041 candidate rows remain unadjudicated; not exhaustive"
+}

@@ -1,0 +1,45 @@
+field_id,description,type,unit,category_codes,knhanes_fields,knhanes_native_unit,output_conversion_from_native,measurement_definition
+21022,Age at recruitment,numeric,years,,age,years,x,Age 80 denotes 80+; predefine age 40–70 for both source and target to remain within source age range and the 2024 BIA examination age range.
+31,Gender,categorical,binary code,0=female;1=male,sex,1 male; 2 female,1 -> 1; 2 -> 0,Comparable measured construct in all three years.
+709,Number in household,numeric,persons,,cfam,persons; 6 means >=6,1..6 retained; 9 -> missing,Public household size is top-coded at 6. Apply the same cap to UKB synthetic and real features.
+4079,"Diastolic blood pressure, automated reading",numeric,mmHg,,HE_dbp,mmHg,x,Official final reading is mean of second and third readings. Adult automated oscillometric method used consistently 2022–2024; source instrument/aggregation differs.
+4080,"Systolic blood pressure, automated reading",numeric,mmHg,,HE_sbp,mmHg,x,Official final reading is mean of second and third readings. Adult automated oscillometric method used consistently 2022–2024; source instrument/aggregation differs.
+102,"Pulse rate, automated reading",numeric,bpm,,HE_PLS_30;HE_mPLS,counts/30 seconds; counts/60 seconds,2*HE_PLS_30 when observed; otherwise HE_mPLS,Convert manual 30-second counts to beats/minute; 60-second field fills alternative measurement protocol. Both missing -> missing; if both observed report discordance.
+48,Waist circumference,numeric,cm,,HE_wc,cm,x,Comparable measured construct in all three years.
+21002,Weight,numeric,kg,,HE_wt,kg,x,Comparable measured construct in all three years.
+21001,Body mass index (BMI),numeric,kg/m^2,,HE_BMI,kg/m^2,x,Comparable measured construct in all three years.
+50,Standing height,numeric,cm,,HE_ht,cm,x,Comparable measured construct in all three years.
+23116,Leg fat mass (left),numeric,kg,,BIA_FLL,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23112,Leg fat mass (right),numeric,kg,,BIA_FRL,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23124,Arm fat mass (left),numeric,kg,,BIA_FLA,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23120,Arm fat mass (right),numeric,kg,,BIA_FRA,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23128,Trunk fat mass,numeric,kg,,BIA_FT,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23099,Body fat percentage,numeric,%,,BIA_PBF,%,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23100,Whole body fat mass,numeric,kg,,BIA_BFM,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23101,Whole body fat-free mass,numeric,kg,,BIA_FFM,kg,x,BIA InBody970 estimated mass/percentage; same physiological construct but different device from UKB. BIA ages >=10 in 2022/2023 and >=40 in 2024; excludes pregnancy and implantable cardiac devices.
+23102,Whole body water mass,numeric,kg,,BIA_TBW,L,numeric identity using 1 L water approximately 1 kg,"Total body water is litres in KNHANES and kg in UKB. Use conventional water-density approximation, explicitly documented; NOT an exact same-unit identity. BIA age restrictions apply."
+874,Duration of walks,numeric,minutes/day,,BE3_31;BE3_32;BE3_33,minutes per walking day,60*BE3_32 + BE3_33 for walkers with both time fields valid; zero if BE3_31==1,Both record duration on a typical walking day with >=10 minute bouts. KNHANES last week versus UKB last four weeks; no multiplication by days/week.
+864,Number of days/week walked 10+ minutes,numeric,days/week,,BE3_31,days/week,BE3_31 - 1 for values 1..8,Both instruments ask >=10 minute walks. KNHANES prior week versus UKB typical week within prior four weeks; record recall-window difference.
+20116,Smoking status,categorical,category code,0=never;1=previous;2=current,BS1_1;BS3_1,0 never;1 previous;2 current,"BS3_1 in {1,2}->2; BS1_1==3 ->0; BS3_1==3 and BS1_1==2 ->1; BS3_1==3 and BS1_1==1 -> missing","UKB never includes just tried once/twice, KNHANES lifetime <100 does not isolate this. Conservative mapping keeps <100 former smokers missing. Current smokers remain current regardless of lifetime threshold."
+1239,Current tobacco smoking,categorical,category code,0=no;1=daily;2=occasional,BS1_1;BS3_1,categorical,BS3_1 1->1; 2->2; 3->0; BS1_1==3 ->0; otherwise missing,"Matches current daily/occasional/no smoking categories. KNHANES refers to conventional cigarettes, UKB to tobacco generally; retain this instrument difference."
+20117,Alcohol drinker status,categorical,category code,0=never;1=previous;2=current,BD1;BD1_11,0 never;1 previous;2 current,BD1==1 ->0; BD1==2 and BD1_11==1 ->1; BD1==2 and BD1_11 in 2..6 ->2,"Never/former/current can be aligned; KNHANES current means drinking within previous year, UKB habitual current. Do not map frequency bins one-to-one."
+30030,Haematocrit percentage,numeric,%,,HE_HCT,%,x,Comparable measured construct in all three years.
+30020,Haemoglobin concentration,numeric,g/dL,,HE_HB,g/dL,x,Comparable measured construct in all three years.
+30050,Mean corpuscular haemoglobin,numeric,pg,,HE_MCH,pg,x,Comparable measured construct in all three years.
+30060,Mean corpuscular haemoglobin concentration,numeric,g/dL,,HE_MCHC,g/dL,x,Comparable measured construct in all three years.
+30040,Mean corpuscular volume,numeric,fL,,HE_MCV,fL,x,Comparable measured construct in all three years.
+30080,Platelet count,numeric,10^9 cells/L,,HE_Bplt,10^3/uL = 10^9/L,x,Comparable measured construct in all three years.
+30010,Red blood cell (erythrocyte) count,numeric,10^12 cells/L,,HE_RBC,10^6/uL = 10^12/L,x,Comparable measured construct in all three years.
+30000,White blood cell (leukocyte) count,numeric,10^9 cells/L,,HE_WBC,10^3/uL = 10^9/L,x,Comparable measured construct in all three years.
+30620,Alanine aminotransferase,numeric,U/L,,HE_alt;HE_alt_etc,IU/L,HE_alt; if missing and exact normalized flag <5 then 5/sqrt(2),A documented lower-reporting-limit exception. Record counts by year. Alternative LOD/2 or leaving censored values missing can be sensitivity analysis.
+30650,Aspartate aminotransferase,numeric,U/L,,HE_ast,IU/L,x,Comparable measured construct in all three years.
+30710,C-reactive protein,numeric,mg/L,,HE_hsCRP;HE_hsCRP_etc,mg/L,HE_hsCRP; if missing and exact normalized flag <0.2 then 0.2/sqrt(2),"Already mg/L, DO NOT multiply by 10. Documented left censoring, not ordinary missingness. Record replacement counts by year."
+30690,Cholesterol,numeric,mmol/L,,HE_chol,mg/dL,x * 0.02586,Comparable measured construct in all three years.
+30700,Creatinine,numeric,umol/L,,HE_crea,mg/dL,x * 88.4,Comparable measured construct in all three years.
+30740,Glucose,numeric,mmol/L,,HE_glu,mg/dL,x * 0.05551,Comparable measured construct in all three years.
+30750,Glycated haemoglobin (HbA1c),numeric,mmol/mol,,HE_HbA1c,NGSP %,(x - 2.152) / 0.09148,NGSP % to IFCC mmol/mol using exactly the existing UKB–NHANES harmonization constants. Do not additionally use old-vs-new KNHANES lab trend correction in this 2022–2024 analysis.
+30760,HDL cholesterol,numeric,mmol/L,,HE_HDL_st2,mg/dL,x * 0.02586,Comparable measured construct in all three years.
+30780,LDL direct,numeric,mmol/L,,HE_LDL_drct,mg/dL,x * 0.02586,Comparable measured construct in all three years.
+30870,Triglycerides,numeric,mmol/L,,HE_TG,mg/dL,x * 0.01129,Comparable measured construct in all three years.
+30880,Urate,numeric,umol/L,,HE_Uacid,mg/dL,x * 59.48,Comparable measured construct in all three years.
+30670,Urea,numeric,mmol/L,,HE_BUN,mg/dL urea nitrogen,x * 0.357,Comparable measured construct in all three years.

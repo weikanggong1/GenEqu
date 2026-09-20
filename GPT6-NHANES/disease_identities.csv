@@ -1,0 +1,15 @@
+endpoint,clinical_name,ascertainment,eligible_age_min,eligible_sex,questionnaire_fields,positive_rule,information_boundary
+I9_HYPTENSESS,Reported hypertension,self-reported clinician diagnosis history at NHANES survey,16,both,BPQ020,binary,Measurement and endpoint definitions only; no frequencies or participant information
+E4_HYPERCHOL,Reported high cholesterol,self-reported clinician diagnosis history at NHANES survey,20,both,BPQ080,binary,Measurement and endpoint definitions only; no frequencies or participant information
+E4_DM2,"Reported diagnosed diabetes, type unspecified",self-reported clinician diagnosis history at NHANES survey,1,both,DIQ010,binary,Measurement and endpoint definitions only; no frequencies or participant information
+N14_CHRONKIDNEYDIS,Reported weak or failing kidneys,self-reported clinician diagnosis history at NHANES survey,20,both,KIQ020,binary,Measurement and endpoint definitions only; no frequencies or participant information
+I9_ISCHHEART,"Reported coronary heart disease, angina or myocardial infarction",self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160C;MCQ160D;MCQ160E,any_yes,Measurement and endpoint definitions only; no frequencies or participant information
+I9_HEARTFAIL,Reported congestive heart failure,self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160B,binary,Measurement and endpoint definitions only; no frequencies or participant information
+K11_LIVER,Reported liver condition,self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160L,binary,Measurement and endpoint definitions only; no frequencies or participant information
+M13_OSTEOPOROSIS,Reported osteoporosis,self-reported clinician diagnosis history at NHANES survey,20,both,OSQ060,binary,Measurement and endpoint definitions only; no frequencies or participant information
+N14_PROSTHYPERPLA,Reported benign prostatic enlargement,self-reported clinician diagnosis history at NHANES survey,30,male,KIQ120;KIQ140,bph,Measurement and endpoint definitions only; no frequencies or participant information
+C3_PROSTATE_EXALLC,Reported prostate cancer,self-reported clinician diagnosis history at NHANES survey,30,male,KIQ180;KIQ200,prostate_cancer,Measurement and endpoint definitions only; no frequencies or participant information
+J10_ASTHMA_MAIN_EXMORE,Reported asthma,self-reported clinician diagnosis history at NHANES survey,1,both,MCQ010,binary,Measurement and endpoint definitions only; no frequencies or participant information
+I9_STR_SAH,Reported stroke,self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160F,binary,Measurement and endpoint definitions only; no frequencies or participant information
+M13_ARTHROSIS,Reported osteoarthritis,self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160A;MCQ190,arthritis subtype=2,Measurement and endpoint definitions only; no frequencies or participant information
+M13_RHEUMA,Reported rheumatoid arthritis,self-reported clinician diagnosis history at NHANES survey,20,both,MCQ160A;MCQ190,arthritis subtype=1,Measurement and endpoint definitions only; no frequencies or participant information

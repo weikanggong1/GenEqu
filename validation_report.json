@@ -1,0 +1,53 @@
+{
+  "synthetic_only": true,
+  "clinical": {
+    "GPT6-UKB": {
+      "endpoints": 30,
+      "rows_per_endpoint": 1000,
+      "measurements": 201
+    },
+    "GPT6-UKB-rare": {
+      "endpoints": 15,
+      "rows_per_endpoint": 1000,
+      "measurements": 201
+    },
+    "GPT6-NHANES": {
+      "endpoints": 14,
+      "rows_per_endpoint": 1000,
+      "measurements": 52
+    },
+    "GPT6-KNHANES": {
+      "endpoints": 10,
+      "rows_per_endpoint": 1000,
+      "measurements": 44
+    }
+  },
+  "brain": {
+    "ad-binary": {
+      "rows": 100,
+      "measurements": 15,
+      "deterministic": true
+    },
+    "ad-multiclass": {
+      "rows": 150,
+      "measurements": 15,
+      "deterministic": true
+    },
+    "scz": {
+      "rows": 100,
+      "measurements": 15,
+      "deterministic": true
+    }
+  },
+  "protein": {
+    "rows": 120,
+    "measurements": 648,
+    "binary_tasks": 6,
+    "deterministic": true
+  },
+  "label_free": {
+    "rows": 256,
+    "measurements": 201
+  },
+  "status": "passed"
+}

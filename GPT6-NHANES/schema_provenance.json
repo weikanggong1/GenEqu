@@ -1,0 +1,27 @@
+{
+  "n_features": 52,
+  "schema_sha256": "ab2e04822663cd0c65cb9d2606775c43cd0ba96e69162f7b6b7e5d0f74a2dd54",
+  "measurement_identity_source_sha256": "a34e77d5e80b7c5286ba561766bdba786d956d71172b10a18bf2b55dbde17cbd",
+  "codebook_sha256": {
+    "DEMO.htm": "3757ef13473397ba968273ee4e7d449c3e2dfa0adb45a0faabddd438ff3e23f9",
+    "BIX.htm": "7b85f2c9420eb839f0cb2f42f1fb82dc85754f9ad2e774327c57f8f7b50bb0a2",
+    "BMX.htm": "79604a8a8861e2983e289742bb1684eb4fe3e86940710353dfceb7b2adb5216a",
+    "BPX.htm": "a3c903181da005fbba28a4ae08abf77d847ac960a601754352b1d2b334f65f4d",
+    "LAB18.htm": "f91dae64e6492b4207d31f3339ad61206a7fdc258dd7b25fad0b0d861d231e5b",
+    "LAB25.htm": "5a0250b92e9a89780da2148264962ef81f2383c6c8846b40078ec40a777dfaf7",
+    "SSCYST_A.htm": "57201ee4fb74bfbffa9d5a97c542eddbb7ca5c51dc63393e628a9f00e8230ea8",
+    "LAB10.htm": "5e08b7e42b1ace5e3e3a43dee82ce0a98d0b470eef5171fe00e19d5d2d34755a",
+    "LAB10AM.htm": "9c9f13c1b6fb04821c401beeabc3cbbc2db3af8649ac58797b3ef8d47383d578",
+    "LAB11.htm": "7b197fe9b06c5839562aae17d2ea7f79385eea138fc97bea3245fbbfffd22b15",
+    "LAB13.htm": "d1d85e2fba18a0d4210a800be58fcc0b6fd92202862749743b93cc1e2a3ad972"
+  },
+  "boundary": "No codebook frequency/count/range-of-observed-values, real distributions, disease associations, prior generator logic or outcomes included. Semantic native descriptions and units only. Physical bounds are not empirical distributions.",
+  "age_topcode": 85,
+  "household_topcode": 7,
+  "missingness": "No empirical missingness rates supplied; builder assumptions must be declared independently.",
+  "hard_range_policy": "No undocumented upper limit is inferred from public frequency tables.",
+  "cbc_units_source": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/LabMethods/CBC_F_met_HE.pdf",
+  "original_allowed_schema_sha256": "ab2e04822663cd0c65cb9d2606775c43cd0ba96e69162f7b6b7e5d0f74a2dd54",
+  "allowed_schema_sha256": "ab2e04822663cd0c65cb9d2606775c43cd0ba96e69162f7b6b7e5d0f74a2dd54",
+  "release_note": "English metadata normalization only; numeric constraints and model parameters are unchanged."
+}

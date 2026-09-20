@@ -1,0 +1,44 @@
+{
+  "labels": [
+    "CU",
+    "AD",
+    "PD",
+    "FTD",
+    "ALS",
+    "StrokeTIA"
+  ],
+  "feature_count": 648,
+  "rows": 3888,
+  "nonzero_by_disease": {
+    "AD": 10,
+    "PD": 24,
+    "FTD": 13,
+    "ALS": 23,
+    "StrokeTIA": 82
+  },
+  "status_counts": {
+    "reference_no_added_disease_shift": 648,
+    "no_eligible_direct_direction_zero_shift": 3086,
+    "prospective_risk_direction_proxy": 55,
+    "genetic_FTD_subtype_direction_attenuated": 4,
+    "single_clinical_source_multiplicity_controlled": 87,
+    "single_targeted_clinical_source": 4,
+    "conflicting_direct_directions_zero_shift": 2,
+    "multiple_named_clinical_sources_concordant": 2
+  },
+  "excluded_cohorts": {
+    "ALS_Chia_2025": "BLSA_controls_named_GNPC_contributor",
+    "bPRIDE_2026": "BioFINDER_Amsterdam_named_GNPC_contributors",
+    "GENFI_FTD_2023": "overlapping_recruiting_centers_cannot_be_separated"
+  },
+  "source_associations_sha256": "d94afc01777efd9a4a0940f45879b0287c8f1fc123e6672ed1e584aebbffa142",
+  "effect_tiers_sd": {
+    "prospective_risk": 0.25,
+    "genetic_subtype": 0.2,
+    "multiple_clinical_sources": 0.55,
+    "single_multiplicity_controlled_clinical": 0.4,
+    "targeted_clinical": 0.3
+  },
+  "target_data_used": false,
+  "inference_warning": "Prospective risk direction is an explicitly modeled proxy, not an observed case-control plasma shift."
+}
