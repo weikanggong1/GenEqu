@@ -76,6 +76,7 @@
     "requirements.txt": "e40c4ccbbe42633526d9808122f86fc25c08b05c7997a0f17e2e3050ac5d3dbf",
     "tests/check_release.py": "f4f151e30291f3a387584e1c916643388013b168041ff844f467fb1d2b281d6e",
     "tests/smoke_test.py": "148a6a32a82dfa74a81b856863df39d5d4f44b1601fe63366243f5698bb25e9e",
-    "validation_report.json": "d73115da1050be66398b11d28f65c625416a66ae33350b9c0578b8942dc32ff9"
+    "validation_report.json": "d73115da1050be66398b11d28f65c625416a66ae33350b9c0578b8942dc32ff9",
+    ".gitattributes": "a2950a04bc8d645f02f32af4679e2959b71225db666041a2827e893dab18e3aa"
   }
 }

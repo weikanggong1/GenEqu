@@ -1,0 +1,2 @@
+# Preserve frozen-file hashes across Windows and Unix checkouts.
+* -text
