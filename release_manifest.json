@@ -70,7 +70,7 @@
     "GPT6-protein/generate.py": "25e389c88c930d54f85db131b9f8ca1763bed8d229a6b04d5cd1aa3e209e1748",
     "GPT6-protein/generate_protein_v2.py": "2fd86ee8790611308865a3521cd68198129482eb6a683e33bfd05ee1eaef0807",
     "GPT6-protein/identity_only.csv": "79880b262b1c7f4571512d1b2e4338701fd0212a8ff684cae0c1ec23d5bf45b3",
-    "README.md": "d8409cd8b5f69d565eb8c7eb91116a77becd92cf26e541e1f87e276826fbe916",
+    "README.md": "644af44cd427b53e25c8d501b4543d138e596cb5bb32644745691c4902802775",
     "examples/logistic_demo_report.json": "93c367537c8943cd1331f013782c3119ea7b06716eeaf59ca4be8a884e4f071e",
     "examples/regenerate.py": "11191502da49576af5c968fadda61c2179dffb8adf1d64f593ae9352ec4994a8",
     "examples/synthetic/GPT6-Brain_ad-binary.npz": "bdebf33f8e3cfdd3c82be6ca7af7d87853d45f205518bc015e56e1198557cd7b",

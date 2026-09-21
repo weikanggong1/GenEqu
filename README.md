@@ -91,15 +91,3 @@ Input columns are dictionary Field IDs, without outcome labels. The conditioning
     python examples/train_logistic_regression.py --csv generated/ukb_diabetes/E4_DM2/synthetic_E4_DM2_10000.csv --schema GPT6-UKB/allowed_schema.csv
 
 For external validation, harmonize definitions, units, category codes, missing values and endpoints first. Keep test outcomes separate from preprocessing, tuning and threshold selection. AUC uses continuous scores; F1 uses the validation-selected threshold. Synthetic example metrics demonstrate software behavior and are not evidence of clinical calibration or real-cohort transfer.
-
-## Reproducibility and scope
-
-- [tests/smoke_test.py](tests/smoke_test.py) generates every supported endpoint and checks shapes, label validity, risk inference and reproducibility.
-- [tests/check_release.py](tests/check_release.py) verifies the release manifest, text checks and frozen runtime hashes.
-- [release_source_hashes.json](release_source_hashes.json) and [source_verification_report.json](source_verification_report.json) identify the scientific runtime files and their verified hashes. [release_manifest.json](release_manifest.json) records all packaged files.
-- [validation_report.json](validation_report.json) records the synthetic smoke checks. Run the two test scripts to repeat validation.
-- [examples/synthetic](examples/synthetic) contains generated format examples with seeds and hashes. No participant records, private splits, credentials or participant identifiers are included.
-- Each family documents its source-derived effects and modeling assumptions. Dictionary bounds constrain the interface; they do not establish population calibration.
-- The supported brain interface exposes FIRST knowledge-based generation. The supported protein interface exposes six binary tasks. The public package does not include the real-cohort benchmark pipeline.
-
-All public comments, help text, documentation and descriptive metadata are in English.
