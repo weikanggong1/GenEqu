@@ -30,4 +30,4 @@ Train each binary task using the corresponding `Y` column. `primary_label` is **
 
 The model adds global and protein-family variation to protein-specific background abundance, then adds disease-specific shifts weighted by participant severity. Inspect `feature_effects.csv` for all 648 × 6 effects, including zero effects. `identity_only.csv` provides protein identities. All values are synthetic; no participant abundance table is packaged.
 
-[GENERATOR_SPEC.md](GENERATOR_SPEC.md) documents the supported six-binary interface, the shipped identity and effect tables, and the measurement equations. EVIDENCE_FREEZE.json records design provenance and verifies runtime integrity; validation_report.json at the repository root records the public software checks.
+[GENERATOR_SPEC.md](GENERATOR_SPEC.md) documents the supported six-binary interface, the shipped identity and effect tables, and the measurement equations. EVIDENCE_FREEZE.json records design provenance and verifies runtime integrity.

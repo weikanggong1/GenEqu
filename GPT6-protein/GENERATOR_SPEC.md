@@ -66,4 +66,4 @@ Runtime integrity checks verify the executable, identity table, effect table, de
 
     python GPT6-protein/generate_protein_v2.py --self-test
 
-The self-test checks deterministic arrays, binary-label constraints, finite values, effect permutations and reversal identities using synthetic inputs. The repository smoke test also verifies the supported six-binary public interface. These checks establish software and equation consistency, not empirical disease frequencies, clinical calibration or predictive performance.
+The self-test checks deterministic arrays, binary-label constraints, finite values, effect permutations and reversal identities using synthetic inputs. These checks establish software and equation consistency, not empirical disease frequencies, clinical calibration or predictive performance.
