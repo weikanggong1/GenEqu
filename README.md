@@ -1,6 +1,4 @@
-# GenEqu
-
-**Biomedical knowledge expressed as executable population models.**
+# Code for “Knowledge-derived generative equations predict human disease”
 
 GenEqu contains six generator families. They sample measurements and disease labels through explicit equations, probability distributions, shared factors and fixed parameter tables. Sampling runs locally without an LLM API, API key, GPU or fitted neural generator.
 
