@@ -1,6 +1,6 @@
 # Code for “Knowledge-derived generative equations predict human disease”
 
-GenEqu is the code accompanying *Knowledge-derived generative equations predict human disease*. This documentation follows manuscript version **v1.0.0**.
+GenEqu is the code accompanying *Knowledge-derived generative equations predict human disease*.
 
 The central idea is to turn biomedical knowledge into an executable population model. GPT-6 writes explicit equations that connect measurements, shared physiological factors and disease risk. Once written, these equations support two routes to prediction: generate synthetic participants and train a predictor, or calculate disease risk directly from a person's measurements.
 
@@ -21,29 +21,9 @@ GPT6-UKB and GPT6-UKB-rare together cover 45 UKB endpoints. UKB models describe 
 
 The [label-free UKB mode](GPT6-UKB/label_free/README.md) generates the same 201 measurements without disease targets. In the manuscript, these populations support representation learning evaluated across 453 diseases.
 
-## How the equations work
-
-A generator first samples shared factors and individual variation, then translates them into measured variables. Disease equations connect the same factors to event or diagnosis probabilities. For example, a shared glycaemic factor can raise both glucose and HbA1c while also increasing diabetes risk. This makes the relationship between measurements and disease explicit.
-
-Clinical model construction uses measurement dictionaries specifying names, units, data types, permissible ranges and category codes. Generation parameters are specified in the programs rather than estimated from empirical quantiles. Imaging and protein models also encode published disease effects. Family documentation describes the equations, inputs and assumptions.
-
-For direct prediction, the direction is reversed: observed measurements inform the person's unobserved factors, and the disease equation is averaged over the remaining uncertainty. The result is a model probability, written as P(Y = 1 | X = x). The rare-endpoint command below implements this route using fixed measurement and disease equations.
-
-## Results in manuscript v1.0.0
-
-Across 45 UKB endpoints, the three prediction routes were evaluated on the same real test participants for each endpoint. Values below are unweighted means across endpoints.
-
-| Prediction route | Mean AUC | Mean F1 |
-|---|---:|---:|
-| Equation | 0.691 | 0.129 |
-| Synthetic data + logistic regression | 0.686 | 0.131 |
-| Real data + logistic regression | 0.756 | 0.161 |
-
-For representation learning across 453 diseases, a 128-dimensional denoising autoencoder pretrained on synthetic measurements achieved mean AUC 0.721 and F1 0.150, compared with 0.724 and 0.152 after pretraining on real measurements. Both encoders were frozen before fitting disease-specific logistic predictors on real training data. These are manuscript benchmark results; the commands below generate data and demonstrate the available interfaces.
-
 ## Installation
 
-Use Python 3.10 or later and the versions in requirements.txt.
+Use Python 3.10 or later and install the dependencies from requirements.txt.
 
     git clone https://github.com/weikanggong1/GenEqu.git
     cd GenEqu
